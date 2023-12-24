@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPS-2</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="main-div">
+    <p class="title">Scissor Paper Rock</p>
+    <p><b>Choose Any One</b></p>
+
+    <!-- //ROCK BUTTON -->
+    <button class="move-button" onclick="
+      playGame('rock');
+    ">
+    <img src="imgs/rock-emoji.png" class="move-icon">
+  </button>
+  
+    <!-- //PAPER BUTTON -->
+    <button class="move-button" onclick="
+      playGame('paper');
+    ">
+    <img src="imgs/paper-emoji.png" class="move-icon">
+    </button>
+  
+    <!-- //SCISSORS BUTTON -->
+    <button class="move-button" onclick="
+      playGame('scissors');
+    ">
+    <img src="imgs/scissors-emoji.png" class="move-icon">
+    </button>
+  
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+  
+    <p class="js-score score"></p>
+    
+    <button class="reset-score-button" onclick="
+      score.wins=0;
+      score.losses=0;
+      score.ties=0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+  
+    ">Reset Score</button>
+
+  </div>
+
+ 
+
+  <!-- This is the starting of a script -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
